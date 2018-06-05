@@ -1,5 +1,6 @@
 package mechero.lab9_franciscoalvarez;
 
+import android.app.Activity;
 import android.content.Context;
 import android.webkit.JavascriptInterface;
 import android.widget.Toast;
@@ -12,7 +13,7 @@ public class WebAppInterface {
     }
 
     @JavascriptInterface
-    public void showToast(String toast){
-        Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
+    public void finishActivity(){
+        ((Activity)mContext).finish();
     }
 }
